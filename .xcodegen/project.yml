@@ -9,7 +9,7 @@ options:
   groupSortPosition: top
   generateEmptyDirectories: true
   deploymentTarget:
-    iOS: "13.0"
+    iOS: "15.0"
 
 ############
 # Targets
