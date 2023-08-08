@@ -1,3 +1,9 @@
+Specify the version for the binary framework's `Info.plist` with an environment variable.
+
+```bash
+export FIORISWIFTUI_VERSION="3.2.0"
+```
+
 Use command line tool [XcodeGen](https://github.com/yonaskolb/XcodeGen) to create Xcode project based on `project.yml` specification.
 
 ```bash

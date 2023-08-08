@@ -32,14 +32,15 @@ targets:
         CFBundleIdentifier: "com.sap.cp.sdk.ios.FioriThemeManager"
         CFBundleExecutable: "FioriThemeManager"
         CFBundleName: "FioriThemeManager"
-        CFBundleShortVersionString: "1.0.0"
-        CFBundleVersion: "1.0.0"
+        CFBundleShortVersionString: ${FIORISWIFTUI_VERSION}
+        CFBundleVersion: ${FIORISWIFTUI_VERSION}
         CFBundlePackageType: "FMWK"
 
     # settings
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: "com.sap.cp.sdk.ios.FioriThemeManager"
       BUILD_LIBRARY_FOR_DISTRIBUTION: true
+      OTHER_SWIFT_FLAGS: "-Xfrontend -empty-abi-descriptor"
 
     # sources
     sources:
@@ -60,14 +61,15 @@ targets:
         CFBundleIdentifier: "com.sap.cp.sdk.ios.FioriCharts"
         CFBundleExecutable: "FioriCharts"
         CFBundleName: "FioriCharts"
-        CFBundleShortVersionString: "1.0.0"
-        CFBundleVersion: "1.0.0"
+        CFBundleShortVersionString: ${FIORISWIFTUI_VERSION}
+        CFBundleVersion: ${FIORISWIFTUI_VERSION}
         CFBundlePackageType: "FMWK"
 
     # settings
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: "com.sap.cp.sdk.ios.FioriCharts"
       BUILD_LIBRARY_FOR_DISTRIBUTION: true
+      OTHER_SWIFT_FLAGS: "-Xfrontend -empty-abi-descriptor"
 
     # sources
     sources:
@@ -91,14 +93,15 @@ targets:
         CFBundleIdentifier: "com.sap.cp.sdk.ios.FioriSwiftUICore"
         CFBundleExecutable: "FioriSwiftUICore"
         CFBundleName: "FioriSwiftUICore"
-        CFBundleShortVersionString: "1.0.0"
-        CFBundleVersion: "1.0.0"
+        CFBundleShortVersionString: ${FIORISWIFTUI_VERSION}
+        CFBundleVersion: ${FIORISWIFTUI_VERSION}
         CFBundlePackageType: "FMWK"
 
     # settings
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: "com.sap.cp.sdk.ios.FioriSwiftUICore"
       BUILD_LIBRARY_FOR_DISTRIBUTION: true
+      OTHER_SWIFT_FLAGS: "-Xfrontend -empty-abi-descriptor"
 
     # sources
     sources:

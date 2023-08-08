@@ -7,6 +7,9 @@ on:
         description: 'Branch to build from'
         default: 'main'
         required: true
+      releaseVersion:
+        description: 'Release Version'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -20,6 +23,8 @@ jobs:
       with:
         ref: ${{ github.event.inputs.ref }}
     - run: brew install xcodegen
+    - name: Set environment variable
+      run: export FIORISWIFTUI_VERSION="${{ github.event.inputs.releaseVersion }}"
     - name: Create FioriSwiftUI.xcodeproj through Xcode and project.yml
       run: cd .xcodegen && xcodegen generate
     - name: Create XCFrameworks
