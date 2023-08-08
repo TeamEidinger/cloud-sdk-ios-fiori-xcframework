@@ -120,7 +120,7 @@ aggregateTargets:
 
           # FioriThemeManager archives
           xcodebuild archive -scheme FioriThemeManager -configuration $CONFIGURATION -destination 'generic/platform=iOS Simulator' ARCHS=x86_64 -archivePath ${OUTPUT_DIR_PATH}/iphonesimulator/FioriThemeManager.xcarchive -derivedDataPath ${HOME}/Library/Developer/Xcode/ SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
-         xcodebuild archive -scheme FioriThemeManager -configuration $CONFIGURATION -destination 'generic/platform=iOS Simulator' ARCHS=arm64 -archivePath ${OUTPUT_DIR_PATH}/iphonesimulator/FioriThemeManager.xcarchive -derivedDataPath ${HOME}/Library/Developer/Xcode/ SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+          xcodebuild archive -scheme FioriThemeManager -configuration $CONFIGURATION -destination 'generic/platform=iOS Simulator' ARCHS=arm64 -archivePath ${OUTPUT_DIR_PATH}/iphonesimulator/FioriThemeManager.xcarchive -derivedDataPath ${HOME}/Library/Developer/Xcode/ SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
           xcodebuild archive -scheme FioriThemeManager -configuration $CONFIGURATION -destination 'generic/platform=iOS' -archivePath ${OUTPUT_DIR_PATH}/iphoneos/FioriThemeManager.xcarchive -derivedDataPath ${HOME}/Library/Developer/Xcode/ SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
           xcodebuild archive -scheme FioriThemeManager -configuration $CONFIGURATION -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath ${OUTPUT_DIR_PATH}/maccatalyst/FioriThemeManager.xcarchive -derivedDataPath ${HOME}/Library/Developer/Xcode/ SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
