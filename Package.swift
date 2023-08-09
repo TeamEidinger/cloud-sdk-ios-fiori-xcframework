@@ -22,6 +22,10 @@ let package = Package(
             name: "FioriThemeManager",
             type: .dynamic,
             targets: ["FioriThemeManager"]
+        ),
+        .library(
+            name: "FioriThemeManagerBinary",
+            targets: ["FioriThemeManagerBinary"]
         )
     ],
     dependencies: [
@@ -44,6 +48,10 @@ let package = Package(
                 .target(name: "FioriCharts", condition: .when(platforms: [.iOS]))
             ],
             resources: [.process("FioriSwiftUICore.strings")]
+        ),
+        .binaryTarget(name: "FioriThemeManagerBinary",
+                      url: "https://github.com/TeamEidinger/cloud-sdk-ios-fiori-xcframework/releases/download/999.0.0/FioriThemeManager.xcframework.zip",
+                      checksum: "a7d11d53b3615ee6ef133e4af80a22ee2a5daf319fdc620a573e64b51ecbd74d"
         ),
         .target(
             name: "FioriThemeManager",
