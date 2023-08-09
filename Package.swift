@@ -21,6 +21,10 @@ let package = Package(
         .library(
             name: "FioriThemeManager",
             type: .dynamic,
+            targets: ["FioriThemeManagerSources"]
+        ),
+        .library(
+            name: "FioriThemeManagerBinary",
             targets: ["FioriThemeManager"]
         )
     ],
@@ -34,20 +38,25 @@ let package = Package(
         ),
         .target(
             name: "FioriCharts",
-            dependencies: ["FioriThemeManager"],
+            dependencies: ["FioriThemeManagerSources"],
             exclude: ["TestCases/SF_EnergyBenchmarking.csv"]
         ),
         .target(
             name: "FioriSwiftUICore",
             dependencies: [
-                .target(name: "FioriThemeManager", condition: .when(platforms: [.iOS])),
+                .target(name: "FioriThemeManagerSources", condition: .when(platforms: [.iOS])),
                 .target(name: "FioriCharts", condition: .when(platforms: [.iOS]))
             ],
             resources: [.process("FioriSwiftUICore.strings")]
         ),
+        .binaryTarget(name: "FioriThemeManager",
+                      url: "https://github.com/TeamEidinger/cloud-sdk-ios-fiori-xcframework/releases/download/999.0.0/FioriThemeManager.xcframework.zip",
+                      checksum: "a7d11d53b3615ee6ef133e4af80a22ee2a5daf319fdc620a573e64b51ecbd74d"
+        ),
         .target(
-            name: "FioriThemeManager",
+            name: "FioriThemeManagerSources",
             dependencies: [],
+            path: "Sources/FioriThemeManager",
             resources: [
                 .process("72-Fonts/Resources"),
                 .process("FioriIcons/Resources/FioriIcon.xcassets")
@@ -55,7 +64,7 @@ let package = Package(
         ),
         .testTarget(
             name: "FioriThemeManagerTests",
-            dependencies: ["FioriThemeManager"],
+            dependencies: ["FioriThemeManagerSources"],
             path: "Tests/FioriSwiftUITests/FioriThemeManager",
             resources: [
                 .process("TestResources")
